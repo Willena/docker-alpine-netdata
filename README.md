@@ -10,7 +10,7 @@ More info about project: https://github.com/firehol/netdata
 More info
 =========
 
-Originaly created by @TitPetric (https://github.com/titpetric/netdata\)
+Originaly created by @TitPetric (https://github.com/titpetric/netdata )
 
 Adapted by @Willena (https://github.com/Willena/docker-alpine-netdata) to work with alpine.
 
