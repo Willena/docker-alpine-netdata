@@ -4,11 +4,10 @@
 
 #apk update
 apk --update add git
-apk add gawk curl jq libuuid --no-cache && \
-apk add git zlib-dev automake autoconf build-base linux-headers musl-dev util-linux-dev libmnl-dev -t buildpack --no-cache
-
-apk add uuid-dev libmnl-dev gcc make curl git autoconf autogen automake pkg-config netcat-openbsd jq
-apk add autoconf-archive lm-sensors nodejs python python-mysqldb python-yaml
+apk add gawk curl jq libuuid
+apk add git zlib-dev automake autoconf build-base linux-headers musl-dev util-linux-dev libmnl-dev
+apk add uuid-dev libmnl-dev gcc make curl git autoconf automake pkgconfig netcat-openbsd jq
+apk add autoconf-archive lm_sensors nodejs python py-mysqldb py-yaml
 apk add ssmtp mailutils apcupsd
 
 # fetch netdata
