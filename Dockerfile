@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM gillena/alpine-bash
 
 ADD git-tag /git-tag
 
