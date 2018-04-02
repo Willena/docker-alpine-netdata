@@ -6,9 +6,9 @@
 apk --update add git
 apk add gawk curl jq libuuid
 apk add git zlib-dev automake autoconf build-base linux-headers musl-dev util-linux-dev libmnl-dev
-apk add uuid-dev libmnl-dev gcc make curl git autoconf automake pkgconfig netcat-openbsd jq
-apk add autoconf-archive lm_sensors nodejs python2 py-mysqldb py-yaml
-apk add ssmtp mailutils apcupsd
+apk add libmnl-dev gcc make curl git autoconf automake pkgconfig netcat-openbsd jq
+apk add lm_sensors nodejs python2 py-mysqldb py-yaml
+apk add ssmtp apcupsd
 
 # fetch netdata
 
