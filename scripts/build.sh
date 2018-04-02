@@ -2,29 +2,7 @@
 
 # install dependencies for build
 
-#apk update
-apk --update add git
-apk add gawk curl jq libuuid
-apk add git zlib-dev automake autoconf build-base linux-headers musl-dev util-linux-dev libmnl-dev
-apk add libmnl-dev gcc make curl git autoconf automake pkgconfig netcat-openbsd jq
-apk add lm_sensors nodejs python2 py-mysqldb py-yaml
-apk add ssmtp apcupsd
-
-# fetch netdata
-
-git clone https://github.com/firehol/netdata.git /netdata.git
-cd /netdata.git
-TAG=$(</git-tag)
-if [ ! -z "$TAG" ]; then
-	echo "Checking out tag: $TAG"
-	git checkout tags/$TAG
-else
-	echo "No tag, using master"
-fi
-
-# use the provided installer
-
-./netdata-installer.sh --dont-wait --dont-start-it
+apk update && apk add curl && yes | bash <(curl -Ss https://my-netdata.io/kickstart.sh) all
 
 # removed hack on 2017/1/3
 #chown root:root /usr/libexec/netdata/plugins.d/apps.plugin
@@ -35,7 +13,6 @@ fi
 cd /
 rm -rf /netdata.git
 
-apk del zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autogen automake pkg-config
 rm -rf /var/cache/misc/* /var/cache/apk/*
 
 # symlink access log and error log to stdout/stderr
