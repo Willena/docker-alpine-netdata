@@ -64,6 +64,10 @@ if [[ $PUSHBULLET_DEFAULT_EMAIL ]]; then
 	sed -i -e "s#DEFAULT_RECIPIENT_PUSHBULLET=\"\"#DEFAULT_RECIPIENT_PUSHBULLET=\"${PUSHBULLET_DEFAULT_EMAIL}\"#" /etc/netdata/health_alarm_notify.conf
 fi
 
+if [[ $IP ]]; then
+	NETDATA_IP=$IP
+fi
+
 if [[ $NETDATA_IP ]]; then
 	NETDATA_ARGS="${NETDATA_ARGS} -i ${NETDATA_IP}"
 fi
